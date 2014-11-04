@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Delayed times {% endblock %}
+{% block heading %}First {{num}} trip updates:{% endblock %}
+{% block content %}
+{% block buttons%} {%endblock%}
+{% block map%} {%endblock%}
+      <!-- LATE -->
+      <h3 style="text-align:left">Late</h3>
+      <div class="container text-center">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+        
+          <ul class="list-unstyled">
+            {% for time in time_list_late%}
+                <li>BUS ID:{{time.id}} is {{time.mins}} minute(s) late.</li>
+            {% endfor %}
+          </ul>
+       </div>
+      </div>
+      </div>
+      
+      <br>
+        
+       <!-- ON TIME -->
+      <h3 style="text-align:left">Early</h3>
+      <div class="container text-center">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+        
+          <ul class="list-unstyled">
+            {% for time in time_list_early%}
+                <li>BUS ID:{{time.id}} is {{time.mins}} minute(s) early.</li>
+            {% endfor %}
+          </ul>
+       </div>
+      </div>
+      </div>
+      
+      <br>
+       <!-- ON TIME -->
+      <h3 style="text-align:left">On time</h3>
+      <div class="container text-center">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+        
+          <ul class="list-unstyled">
+            {% for time in time_list_zero%}
+                <li>BUS ID:{{time.id}} is on time!</li>
+            {% endfor %}
+          </ul>
+       </div>
+      </div>
+      </div>
+      
+      
+          
+          
+          
+      
+        
+      
+    
+    
+
+    
+    <!--<p>YOUR BUS IS OFF BY {{ current_delay }} minute(s).</p>-->
+
+{% endblock %}
