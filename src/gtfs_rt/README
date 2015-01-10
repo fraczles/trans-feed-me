@@ -1,0 +1,11 @@
+USAGE:
+
+to run script:
+./gtfsrdb.py -t http://developer.mbta.com/lib/GTRTFS/Alerts/TripUpdates.pb -d sqlite:///a.db -c -o -w 2
+
+
+-t TripUpdates feed
+-d database
+-c create tables
+-o update DB
+-w time btwn queries

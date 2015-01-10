@@ -12,7 +12,7 @@ def fn(request,num):
     time_list_late = []
     time_list_early = []
     time_list_zero = []
-    conn = sqlite3.connect("gtfs_rt/gtfsrdb/c.db")
+    conn = sqlite3.connect("gtfs_rt/gtfsrdb/a.db")
     c = conn.cursor()
     b = conn.cursor()
     c.execute("select arrival_delay from stop_time_updates")
